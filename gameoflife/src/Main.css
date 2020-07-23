@@ -1,0 +1,60 @@
+body {
+  background-image: url(https://www.itl.cat/pngfile/big/14-146363_dark-blue-background-wallpaper-hd-clipartsgram-solid-color.jpg)
+}
+
+.box {
+  display: inline-block;       
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  margin-left: -1px;
+  margin-bottom: -1px;
+  }
+
+.off {
+  background-color: #fac028;
+}
+
+.on {
+  background-color: black;
+}
+  
+.box:hover { 
+  background: #f02727;
+}
+
+.center {
+  margin: auto;
+  display: table;
+  margin-top: 10px;
+}
+
+.grid {
+  width: 150px;
+  line-height: 0;
+  margin: auto;
+  box-shadow: 0px 0px 20px white;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+  
+h2, h3, h4 {
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+}
+
+.main-title {
+  color: #fac028;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 30px;
+  font-size: 50px;
+}
+
+h4 {
+  margin-top: 0px;
+}

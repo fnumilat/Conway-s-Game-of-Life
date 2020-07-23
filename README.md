@@ -16,3 +16,6 @@ It consists of a collection of cells which, based on a few mathematical rules, c
 * Each cell with two or three neighbors survives.
 ### For a space that is 'empty' or 'unpopulated'
 * Each cell with three neighbors becomes populated.
+
+## What language are you using to build this game?
+React.js
