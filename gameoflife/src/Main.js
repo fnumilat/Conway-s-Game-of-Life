@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '../src/components/Grid'
+import arrayClone from './components/helperFunctions'
 import './Main.css';
 
 
@@ -20,8 +21,30 @@ class Main extends React.Component {
       // another array as big as the columns var and each
       // element in that array is false
       gridFull: Array(this.rows).fill().map(() => Array(this.columns).fill(false))
-    }
-  }
+    };
+  };
+
+  // my methods:
+
+  // the select box method:
+  // with this method update that above array to set to true
+  // when a box is selected
+  selectBox = (row, column) => {
+    // create a copy of the array instead of changing the state of the gridFull straight
+    let gridCopy = arrayClone(this.state.gridFull);
+    // if it's selected turn it true and if it's not selected keep it false
+    gridCopy[row][column] = !gridCopy[row][column]
+    this.setState({
+      gridFull: gridCopy
+    })
+  };
+
+  // the seed method:
+  // this method is going to make sure that some boxes are 
+  // automatically being selected when the pages is loaded
+  // or the user select to seed
+
+
   render() {
     return (
       <div>
