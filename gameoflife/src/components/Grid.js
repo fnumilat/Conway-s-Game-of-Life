@@ -8,7 +8,7 @@ class Grid extends React.Component {
       // create a var for width and the the state
       // of the colomns from Main.js and multiply it
       // by 16
-      const width = (this.props.columns * 16);
+      const width = (this.props.columns * 14);
       // create an array var for rows
       var rowsArray = [];
 

@@ -2,6 +2,43 @@ body {
   background-image: url(https://www.itl.cat/pngfile/big/14-146363_dark-blue-background-wallpaper-hd-clipartsgram-solid-color.jpg)
 }
 
+h3, h4 {
+  color: white;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 10px;
+}
+
+
+h4 {
+  margin-top: 0px;
+}
+
+.main-title {
+  color: #fac028;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 30px;
+  font-size: 70px;
+  border-style: dashed;
+  padding-bottom: 20px;
+}
+
+.generations-title {
+  color: #ea3b01;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  margin-top: 30px;
+  font-size: 40px;
+  background-color: white;
+  border-style: dotted;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
 .box {
   display: inline-block;       
   border: 1px solid black;
@@ -23,38 +60,73 @@ body {
   background: #f02727;
 }
 
-.center {
-  margin: auto;
-  display: table;
-  margin-top: 10px;
-}
-
 .grid {
   width: 150px;
   line-height: 0;
   margin: auto;
-  box-shadow: 0px 0px 20px white;
+  box-shadow: 0px 0px 50px #eded00;
   margin-top: 40px;
   margin-bottom: 30px;
 }
-  
-h2, h3, h4 {
+
+
+.buttonsBox {
+  margin: auto;
+  display: table;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: #e2e22e;
+  padding-top: 15px;
+  padding-right: 55px;
+  padding-left: 55px;
+  padding-bottom: 15px;
+  border-style: dashed
+}
+
+.buttons {
+  margin: 2px;
+  width: 80px;
+}
+
+
+.aboutBox {
+  margin: auto;
+  display: table;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  padding-top: 15px;
+  padding-right: 55px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  border-style: dashed;
+  width: 50%
+}
+
+.aboutBox-title {
+  font-size: 35px;
+  color: #120065;
+}
+
+.aboutBox-secTitle {
+  font-size: 30px;
+  color: #ff2d00;
+}
+
+.aboutBox-thirdTitle {
+  font-size: 30px;
+  color: black;
+}
+
+.aboutBox-paragraph {
+  font-size: 25px;
+}
+
+.aboutBox-ul {
+  font-size: 25px;
+}
+
+.footer {
   color: white;
-  margin: auto;
   text-align: center;
-  width: 50%;
-  margin-top: 10px;
-}
-
-.main-title {
-  color: #fac028;
-  margin: auto;
-  text-align: center;
-  width: 50%;
-  margin-top: 30px;
-  font-size: 50px;
-}
-
-h4 {
-  margin-top: 0px;
 }
