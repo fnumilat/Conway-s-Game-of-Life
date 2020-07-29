@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '../src/components/Grid'
 import arrayClone from './components/helperFunctions'
 import Buttons from './components/buttons'
+import PatternButtons from './components/patternButtons'
 import About from './components/about'
 import './Main.css';
 
@@ -61,7 +62,6 @@ class Main extends React.Component {
       gridFull: gridCopy
     })
   };
-
 
 
   // the play button method to trigger the play method
@@ -157,11 +157,82 @@ class Main extends React.Component {
     })
   };
 
+  /// preset patterns:
+  // blinker pattern
+  blinker = () => {
+    // create a copy of the grid
+    let gridCopy = arrayClone(this.state.gridFull);
+    // through for loops go through every row and column of the grid
+    // and display these certain cells in the grid
+    for (let i = 0; i < this.rows; i++) {
+        for (let j = 0; j < this.columns; j++) {
+            if (
+                [10, 11, 12].includes(j) &&
+                [2, 7, 17, 22].includes(i)
+            ) {
+                gridCopy[i][j] = true;
+            } else {
+                gridCopy[i][j] = false;
+            }
+        }
+    }
+    this.setState({
+        gridFull: gridCopy
+    })
+};
+
+  // beacon pattern
+  beacon = () => {
+    // create a copy of the grid
+    let gridCopy = arrayClone(this.state.gridFull);
+    // through for loops go through every row and column of the grid
+    // and display these certain cells in the grid
+    for (let i = 0; i < this.rows; i++) {
+      for (let j = 0; j < this.columns; j++) {
+        if ([10, 11, 34, 35].includes(j) && [10, 11].includes(i)) {
+          gridCopy[i][j] = true;
+        } else if ([12, 13, 32, 33].includes(j) && [12, 13].includes(i)) {
+          gridCopy[i][j] = true;
+        } else {
+          gridCopy[i][j] = false;
+        }
+      }
+    }
+    this.setState({
+      gridFull: gridCopy
+    })
+  };
+
+  // glider pattern
+  glider = () => {
+    // create a copy of the grid
+    let gridCopy = arrayClone(this.state.gridFull);
+    // through for loops go through every row and column of the grid
+    // and display these certain cells in the grid
+    for (let i = 0; i < this.rows; i++) {
+      for (let j = 0; j < this.columns; j++) {
+        if (j === 11 && i === 10) {
+          gridCopy[i][j] = true;
+        } else if (j === 12 && i === 11) {
+          gridCopy[i][j] = true;
+        } else if ([10, 11, 12].includes(j) && i === 12) {
+          gridCopy[i][j] = true;
+        } else {
+          gridCopy[i][j] = false;
+        }
+      }
+    }
+    this.setState({
+      gridFull: gridCopy
+    })
+  };
+
   componentDidMount() {
     // this method will randomly select boxes 
     this.random()
     // this will play the game
     this.playButton()
+    // this will play the blinker preset'
   };
 
 
@@ -185,8 +256,13 @@ class Main extends React.Component {
         random = { this.random}
         gridSize = {this.gridSize}
         />
+        <PatternButtons
+        blinker = {this.blinker}
+        beacon = {this.beacon}
+        glider = {this.glider}
+        />
         <About/>
-        <p className = "footer">Work By: Fnu Milat</p>
+        <p className = "footer">Fnu Milat - fnumilat@gmail.com</p>
       </div>
     )
   }

@@ -88,6 +88,32 @@ h4 {
   width: 80px;
 }
 
+.patternButtonsBox {
+  margin: auto;
+  display: table;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: #e2e22e;
+  padding-top: 15px;
+  padding-right: 105px;
+  padding-left: 105px;
+  padding-bottom: 15px;
+  border-style: dashed;
+  /* width: 50%; */
+}
+
+.pattern-buttons {
+  margin: 2px;
+  width: 150px;
+  margin-left: 10px;
+  background-color: red;
+}
+
+.patterns-title {
+  text-align: center;
+  color: black;
+  margin-bottom: 15px;
+}
 
 .aboutBox {
   margin: auto;
