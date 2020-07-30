@@ -77,15 +77,17 @@ h4 {
   margin-bottom: 20px;
   background-color: #e2e22e;
   padding-top: 15px;
-  padding-right: 55px;
-  padding-left: 55px;
+  padding-right: 40px;
+  padding-left: 40px;
   padding-bottom: 15px;
   border-style: dashed
 }
 
 .buttons {
   margin: 2px;
-  width: 80px;
+  /* padding-right: 10px;
+  padding-left: 10px; */
+  width: 85px;
 }
 
 .patternButtonsBox {

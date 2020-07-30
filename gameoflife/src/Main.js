@@ -63,6 +63,27 @@ class Main extends React.Component {
     })
   };
 
+  // the next generation method:
+  // this method is going to make sure that some boxes are 
+  // randomly being selected when the user select it
+  // nextGen = () => {
+  //   // create a copy of the grid
+  //   let gridCopy = arrayClone(this.state.gridFull);
+  //   // through a for loop go through every cell of the grid
+  //   // and decide wether turn them on or off
+  //   for (let i = 0; i < this.rows; i++) {
+  //     for (let j = 0; j < this.columns; j++) {
+  //       // randomly choose wether a cell stays off or turns on
+  //       if (Math.floor(Math.random() * 3) === 1) {
+  //         gridCopy[i][j] = true;
+  //       }
+  //     }
+  //   }
+  //   this.setState({
+  //     gridFull: gridCopy,
+  //   })
+  // };
+
 
   // the play button method to trigger the play method
   playButton = () => {
@@ -167,8 +188,8 @@ class Main extends React.Component {
     for (let i = 0; i < this.rows; i++) {
         for (let j = 0; j < this.columns; j++) {
             if (
-                [10, 11, 12].includes(j) &&
-                [2, 7, 17, 22].includes(i)
+                [4, 5, 6, 12, 13, 14, 34, 35, 36, 22, 23, 24, 43, 44, 45].includes(j) &&
+                [7, 22].includes(i)
             ) {
                 gridCopy[i][j] = true;
             } else {
@@ -211,11 +232,11 @@ class Main extends React.Component {
     // and display these certain cells in the grid
     for (let i = 0; i < this.rows; i++) {
       for (let j = 0; j < this.columns; j++) {
-        if (j === 11 && i === 10) {
+        if (j === 11 && i === 3) {
           gridCopy[i][j] = true;
-        } else if (j === 12 && i === 11) {
+        } else if (j === 12 && i === 4) {
           gridCopy[i][j] = true;
-        } else if ([10, 11, 12].includes(j) && i === 12) {
+        } else if ([10, 11, 12].includes(j) && i === 5) {
           gridCopy[i][j] = true;
         } else {
           gridCopy[i][j] = false;
@@ -232,7 +253,6 @@ class Main extends React.Component {
     this.random()
     // this will play the game
     this.playButton()
-    // this will play the blinker preset'
   };
 
 
@@ -254,6 +274,7 @@ class Main extends React.Component {
         fast = {this.fast}
         clear = {this.clear}
         random = { this.random}
+        nextGen = { this.nextGen}
         gridSize = {this.gridSize}
         />
         <PatternButtons

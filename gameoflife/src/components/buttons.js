@@ -25,6 +25,7 @@ class Buttons extends React.Component {
                     <Button className="buttons" onClick={this.props.slow}>Slow</Button>
                     <Button className="buttons" onClick={this.props.fast}>Fast</Button>
                     <Button className="buttons" onClick={this.props.random}>Random</Button>
+                    {/* <Button className="buttons" onClick={this.props.nextGen}>Next Generation</Button> */}
                     <DropdownButton className="buttons" title="Grid Size" id="dropdown-basic-button" onSelect={this.handleSelect}>
                         <Dropdown.Item eventKey="1">Small</Dropdown.Item>
                         <Dropdown.Item eventKey="2">Original</Dropdown.Item>
