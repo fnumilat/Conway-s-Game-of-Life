@@ -16,8 +16,10 @@ they can use the 3 preset configurations that I have set up.
 * Glider
 
 ## What other features does the app include?
-* Play
-* Pause
-* Clear
-* Speeds, (Fast and Slow)
-* Grid Size, (Small, Original and Extra Large)
+* Generations(Showing the numbers of generations)
+* Play(User can play)
+* Pause(User can pause)
+* Clear(User can clear the grid)
+* Fast(Use can make the speed of the game fast)
+* Slow(Use can make the speed of the game slow)
+* Grid Size(User can change the sizes of the grid to: Small, Original and Extra Large)
