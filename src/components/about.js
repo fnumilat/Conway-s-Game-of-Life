@@ -7,7 +7,7 @@ class About extends React.Component {
   render() {
     return (
       <div className = "aboutBox">
-          <h1 className = "aboutBox-title">About The Game:</h1>
+          <h1 className = "aboutBox-title">About The Game:::</h1>
           <br></br>
           <h2 className = "aboutBox-secTitle">What is Conway's Game of Life?</h2>
           <br></br>
